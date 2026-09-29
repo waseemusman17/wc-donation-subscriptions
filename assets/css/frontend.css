@@ -1,0 +1,156 @@
+/**
+ * WooCommerce Donation Subscriptions - frontend styles.
+ */
+
+.wcds-donation-field-wrapper {
+	margin-bottom: 15px;
+}
+
+.wcds-donation-field-wrapper .wcds-donation-description {
+	margin: 0 0 15px 0;
+	font-style: italic;
+	color: #666;
+}
+
+.wcds-donation-field-wrapper label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #fff;
+	padding: 10px 0;
+	font-size: 20px;
+}
+
+.wcds-donation-field-wrapper input[type="number"] {
+	width: 100%;
+	padding: 20px;
+	border: 0;
+	border-radius: 4px;
+	background: #0a1f27;
+	margin-bottom: 5px;
+	color: #fff;
+}
+
+.wcds-donation-field-wrapper input[type="number"]:focus {
+	border-color: #0073aa;
+	outline: none;
+}
+
+.wcds-donation-field-wrapper .wcds-donation-min {
+	margin: 5px 0 0 0;
+	font-size: 12px;
+	color: #666;
+}
+
+/* Popup */
+.wcds-popup-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 10000;
+	backdrop-filter: blur(3px);
+}
+
+.wcds-popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+	max-width: 400px;
+	width: 90%;
+	text-align: center;
+	z-index: 10001;
+	animation: wcdsPopupSlideIn 0.3s ease-out;
+}
+
+@keyframes wcdsPopupSlideIn {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -60%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.wcds-popup h3 {
+	color: #00161e;
+	margin: 0 0 15px 0;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.wcds-popup p {
+	color: #666;
+	margin: 0 0 20px 0;
+	line-height: 1.5;
+	font-size: 16px;
+}
+
+.wcds-popup-buttons {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+
+.wcds-popup-btn {
+	padding: 12px 24px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+	transition: all 0.2s;
+	text-decoration: none;
+}
+
+.wcds-popup-btn.primary {
+	background: #d6ff62;
+	color: #00161e;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	border: 1px solid #00161e;
+	font-weight: 600;
+}
+
+.wcds-popup-btn.primary:hover {
+	background: transparent;
+}
+
+.wcds-popup-btn.primary svg {
+	width: 14px;
+	height: 14px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+}
+
+@media (max-width: 480px) {
+	.wcds-popup {
+		padding: 20px;
+		margin: 20px;
+	}
+
+	.wcds-popup-buttons {
+		flex-direction: column;
+	}
+
+	.wcds-popup-btn {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+body.wcds-popup-open {
+	overflow: hidden;
+}
