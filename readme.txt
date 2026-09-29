@@ -14,7 +14,9 @@ Let customers choose their own donation amount on any WooCommerce product, with 
 
 == Description ==
 
-W17 Donation Subscriptions for Product turns any WooCommerce product into a "pay what you want" donation item, with a minimum amount you set per product. It's built for nonprofits, membership programs, and creators who want supporters to choose their own contribution amount instead of a fixed price — including recurring donations when used together with [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/).
+W17 Donation Subscriptions for Product turns any WooCommerce product into a "pay what you want" donation item, with a minimum amount you set per product.
+
+It's built for nonprofits, membership programs, and creators who want supporters to choose their own contribution amount instead of a fixed price — including recurring donations when used together with [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/).
 
 **How it works**
 
@@ -37,6 +39,7 @@ W17 Donation Subscriptions for Product turns any WooCommerce product into a "pay
 * Optional custom message shown above the donation field.
 * Enforces the minimum both in the browser (with a clear message) and on the server, so it can't be bypassed by disabling JavaScript.
 * Automatically carries the customer's chosen amount to WooCommerce Subscriptions renewal orders, when WooCommerce Subscriptions is active.
+* Compatible with WooCommerce High-Performance Order Storage (HPOS).
 * No settings to configure, no external accounts, no tracking.
 
 = External Services =
@@ -74,6 +77,14 @@ No. The minimum is enforced both client-side (with a friendly popup) and server-
 = Can I use this with variable products? =
 
 The donation field is designed for simple products. It has not been tested against variable product variations and may need adjustment for that use case.
+
+= Does this work with the WooCommerce Cart and Checkout blocks? =
+
+The donation field itself uses standard WooCommerce product-page hooks and has been verified with the classic cart and checkout flow. It has not been specifically tested against block-based Cart/Checkout themes; if you run into issues there, please open a support topic.
+
+= Is this compatible with WooCommerce High-Performance Order Storage (HPOS)? =
+
+Yes. The plugin explicitly declares HPOS compatibility and does not rely on any deprecated direct post-table order queries.
 
 = Does this plugin send any data outside my site? =
 
